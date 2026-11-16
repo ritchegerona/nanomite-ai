@@ -1,0 +1,15 @@
+# nanomite config for the local nanomite-mini model.
+# Merge these keys into ~/.config/nanomite/config.toml (do not overwrite the rest).
+
+# --- Option A: MLX server (scripts/serve.sh) ---
+provider = "custom"
+base_url = "http://127.0.0.1:8080/v1"
+api_key = "local"
+model = "/Users/ritchegerona/nanomite-mini/artifacts/final-4bit"
+
+# --- Option B: Ollama (scripts/serve_ollama.sh) ---
+# base_url = "http://127.0.0.1:11434/v1"
+# model = "nanomite-mini-q40"
+
+# Speed: greedy sampling is fastest; set in nanomite via /reasoning minimal
+# or NANOMITE_TEMP=0 env (if supported by your build).

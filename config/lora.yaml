@@ -1,0 +1,20 @@
+# Reference configuration. scripts/train.sh passes these as CLI flags.
+# Paths are placeholders; use scripts/env.sh for the resolved base model.
+model: "<base-4bit-model-dir>"
+train: true
+data: "<repo>/data/sft"
+fine_tune_type: lora
+num_layers: 8
+batch_size: 1
+iters: 250
+learning_rate: 2.0e-5
+max_seq_length: 512
+mask_prompt: true
+grad_checkpoint: true
+grad_accumulation_steps: 2
+adapter_path: "<repo>/artifacts/adapter"
+steps_per_report: 10
+steps_per_eval: 50
+save_every: 50
+val_batches: 1
+test: true
